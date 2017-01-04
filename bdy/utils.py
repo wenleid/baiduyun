@@ -1,4 +1,4 @@
-# coding: utf-8
+﻿# coding: utf-8
 ##
 # @file utils.py
 # @brief 
@@ -22,8 +22,9 @@ else:
     from urllib import parse as urlparse
     raw_input = input
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
+if sys.version_info[0]<3:
+    reload(sys)
+    setdefaultencoding('utf-8')
 
 def get_config(which):
     config = ConfigParser()

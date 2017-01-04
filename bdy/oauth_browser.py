@@ -11,9 +11,9 @@ import webbrowser
 
 def get_oa_info(oa_url, oa_result_base):
     print("请在浏览器中登录您的百度账户，并且将登录成功后的 url 地址复制过来")
-    raw_input("Enter Continue..")
+    input("Enter Continue..")
     webbrowser.open(oa_url)
-    oa_result = raw_input("请输入登录成功后跳转的 url 地址: ")
+    oa_result = input("请输入登录成功后跳转的 url 地址: ")
     if check_success(oa_result, oa_result_base):
         return oa_result
     return ""
